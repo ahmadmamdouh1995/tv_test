@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+
+<body>
+    <header>
+        <h1>Results</h1>
+    </header>
+    <main>
+        <%data.forEach(value=>{%>
+        <div>
+            <h3><%=value.name%></h3>
+            <img src="<%=value.poster_path%>" alt="<%=value.name%>">
+            <form action="/list" method="POST">
+                <input type="hidden" name="name" value="<%=value.name%>">
+                <input type="hidden" name="poster_path" value="<%=value.poster_path%>">
+                <input type="hidden" name="overview" value="<%=value.overview%>">
+                <input type="submit" value="ADD TO MY LIST"> 
+            </form>
+        </div>
+        <%})%>
+    </main>
+
+</body>
+
+</html>

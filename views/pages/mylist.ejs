@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My List</title>
+</head>
+<body>
+    <header><h1>My List</h1></header>
+    <main>
+        <%movieResult.forEach(value =>{%>
+        <div>
+            <h3><%=value.name%></h3>
+            <img src="<%=value.poster_path%>" alt="<%=value.name%>">
+            <p><%=value.overview%></p>
+            <a href="/details/<%=value.id%>"><button>More Details</button></a>
+         </div>
+        <%})%>
+    </main>
+    
+</body>
+</html>

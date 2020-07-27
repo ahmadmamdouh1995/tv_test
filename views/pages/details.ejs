@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <header><h1>Details</h1></header>
+    <main>
+        <div>
+            <h3><%=singleDetails.name%></h3>
+            <img src="<%=singleDetails.poster_path%>" alt="<%=singleDetails.name%>">
+            <form action="/update/<%=singleDetails.id%>?_method=put" method="POST">
+                <input type="text" name="name" value="<%=singleDetails.name%>">
+                <input type="text" name="poster_path" value="<%=singleDetails.poster_path%>">
+                <input type="text" name="overview" value="<%=singleDetails.overview%>">
+                <input type="submit" value="UPDATE MY LIST"> 
+            </form>
+            <form action="/delete/<%=singleDetails.id%>?_method=delete" method="POST">
+                <input type="submit" value="DELETE">
+            </form>
+        </div>
+   
+    </main>
+    
+</body>
+</html>
